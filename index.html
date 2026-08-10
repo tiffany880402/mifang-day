@@ -116,6 +116,14 @@
       <rect x="4" y="3.5" width="16" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
       <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9.5 17V7h3.2a3 3 0 0 1 0 6H9.5"/>
     </symbol>
+    <symbol id="icon-volume-on" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1Z"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.7 6a9 9 0 0 1 0 12"/>
+    </symbol>
+    <symbol id="icon-volume-off" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1Z"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 9.5l5 5M21 9.5l-5 5"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -153,8 +161,13 @@
      滿版(edge-to-edge)呈現;跑馬燈動畫在頁面最上方另外疊加。 -->
 <header class="hero" id="s1">
   <div class="hero__full reveal reveal--hero">
-    <video class="hero__full-img" src="assets/mifang-day-video.mp4" poster="assets/frame-01-full.jpg" autoplay muted loop playsinline controls preload="auto" aria-label="米防員活動主視覺動態版 - 米蘭米主黨全體動員,第一屆戰略性撤退與安全下裝演習,9/18 13:00-16:30">
+    <video class="hero__full-img" id="heroVideo" src="assets/mifang-day-video.mp4" poster="assets/frame-01-full.jpg" autoplay muted loop playsinline preload="auto" aria-label="米防員活動主視覺動態版 - 米蘭米主黨全體動員,第一屆戰略性撤退與安全下裝演習,9/18 13:00-16:30">
     </video>
+    <button type="button" class="hero__sound-toggle" id="heroSoundToggle" aria-label="開啟影片聲音" aria-pressed="false">
+      <svg class="icon hero__sound-icon--off"><use href="#icon-volume-off"/></svg>
+      <svg class="icon hero__sound-icon--on"><use href="#icon-volume-on"/></svg>
+      <span class="hero__sound-label">開啟聲音</span>
+    </button>
   </div>
 </header>
 
@@ -540,284 +553,290 @@
           <div class="roster-item__body">
             <div class="roster-item__body-inner">
               <div class="roster-member-grid">
-              <div class="roster-member">
-                <span class="roster-member__num">01</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">方羿夫 <em>iF</em></p>
+                <div class="roster-member">
+                  <span class="roster-member__num">01</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">方羿夫 <em>iF</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">02</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">熊婉琳 <em>Lily</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">03</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">洪菀濃 <em>Belle</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">04</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">羅婉瑜 <em>Laura</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">05</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳喬 <em>Joey</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">06</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">楊維凱 <em>Kevin</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">07</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">俞乃元 <em>Zoey</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">08</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">沈謙 <em>Alfred</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">09</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">羅光海 <em>Mitsuumi</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">10</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張正宗 <em>Eric</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">11</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">藍文良 <em>Devin</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">12</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林詩晴 <em>Alice</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">13</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">邱于騰 <em>Qmo</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">14</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張瑞恩 <em>Vic</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">15</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">蕭淑芬 <em>Dafen</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">16</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳建麟 <em>Cheney</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">17</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">曾盈學 <em>Jason</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">18</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">謝建輝 <em>Ash</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">19</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">劉心平 <em>Candy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">20</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">李恩儀 <em>Ines</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">21</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林岳賢 <em>Larry</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">22</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張軒誠 <em>Jacob</em></p>
+                  </div>
                 </div>
               </div>
-              <div class="roster-member">
-                <span class="roster-member__num">02</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">熊婉琳 <em>Lily</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">03</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">洪菀濃 <em>Belle</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">04</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">羅婉瑜 <em>Laura</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">05</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳喬 <em>Joey</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">06</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">楊維凱 <em>Kevin</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">07</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">俞乃元 <em>Zoey</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">08</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">沈謙 <em>Alfred</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">09</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">羅光海 <em>Mitsuumi</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">10</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張正宗 <em>Eric</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">11</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">黃誼孺 <em>Yluvi</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">12</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林詩晴 <em>Alice</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">13</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">邱于騰 <em>Qmo</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">14</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張瑞恩 <em>Vic</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">15</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">蕭淑芬 <em>Dafen</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">16</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳建麟 <em>Cheney</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">17</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">曾盈學 <em>Jason</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">18</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">謝建輝 <em>Ash</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">19</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">劉心平 <em>Candy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">20</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">李恩儀 <em>Ines</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">21</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林岳賢 <em>Larry</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">22</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張軒誠 <em>Jacob</em></p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
         <div class="roster-item">
           <button class="roster-item__header" type="button" aria-expanded="false">
             <span class="roster-item__badge">02</span>
-            <span class="roster-item__name">第 2 組 <em>(22 人)</em></span>
+            <span class="roster-item__name">第 2 組 <em>(23 人)</em></span>
             <svg class="icon roster-item__chevron"><use href="#icon-chevron"/></svg>
           </button>
           <div class="roster-item__body">
             <div class="roster-item__body-inner">
               <div class="roster-member-grid">
-              <div class="roster-member">
-                <span class="roster-member__num">01</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">李惠穎 <em>Vicky</em></p>
+                <div class="roster-member">
+                  <span class="roster-member__num">01</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">李惠穎 <em>Vicky</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">02</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">鄭宛庭 <em>Smallker</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">03</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">簡君舫 <em>Grace</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">04</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">江宜哲 <em>Allen</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">05</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林妤庭 <em>Rita</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">06</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">曾毓芯 <em>Hedy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">07</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">康曉蓁 <em>Jane</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">08</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳彥瑋 <em>William</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">09</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">葉柏宏 <em>Theo</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">10</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">周王鼎 <em>Tim</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">11</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">游琇蘭 <em>Sunny</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">12</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳杰毅 <em>Simon</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">13</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳宜平 <em>Doris</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">14</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">吳東春 <em>Alex</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">15</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">許伯任 <em>Chase</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">16</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳姵儒 <em>Julie</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">17</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">許志心 <em>Sylvia</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">18</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">邵彥菁 <em>Jean</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">19</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林宏勇 <em>Mark</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">20</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">鄭翔文 <em>Sherwin</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">21</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">王柏勳 <em>Brady</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">22</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">黃品馨 <em>Sarah</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">23</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳乙瑄 <em>Erica</em></p>
+                  </div>
                 </div>
               </div>
-              <div class="roster-member">
-                <span class="roster-member__num">02</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">鄭宛庭 <em>Smallker</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">03</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">簡君舫 <em>Grace</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">04</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">江宜哲 <em>Allen</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">05</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林妤庭 <em>Rita</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">06</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">曾毓芯 <em>Hedy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">07</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">康曉蓁 <em>Jane</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">08</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳彥瑋 <em>William</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">09</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">葉柏宏 <em>Theo</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">10</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">周王鼎 <em>Tim</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">11</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">游琇蘭 <em>Sunny</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">12</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳杰毅 <em>Simon</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">13</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳宜平 <em>Doris</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">14</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">吳東春 <em>Alex</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">15</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">許伯任 <em>Chase</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">16</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳姵儒 <em>Julie</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">17</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">許志心 <em>Sylvia</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">18</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">邵彥菁 <em>Jean</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">19</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林宏勇 <em>Mark</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">20</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">鄭翔文 <em>Sherwin</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">21</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">王柏勳 <em>Brady</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">22</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">黃品馨 <em>Sarah</em></p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
@@ -830,296 +849,290 @@
           <div class="roster-item__body">
             <div class="roster-item__body-inner">
               <div class="roster-member-grid">
-              <div class="roster-member">
-                <span class="roster-member__num">01</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">游懷萱 <em>Corn</em></p>
+                <div class="roster-member">
+                  <span class="roster-member__num">01</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">游懷萱 <em>Corn</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">02</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">李宛軒 <em>Grace</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">03</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳晴文 <em>Joey</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">04</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">黃任吟 <em>Irene</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">05</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張綠 <em>Lu</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">06</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">黃依婷 <em>Aya</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">07</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">李天一 <em>Timo</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">08</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">湯淳羽 <em>Birdy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">09</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">楊立琳 <em>Angel</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">10</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">游家祥 <em>Vincent</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">11</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張瑞賢 <em>Henry</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">12</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">黃誼孺 <em>Yluvi</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">13</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林筱真 <em>Jasmine</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">14</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">蔡亦晴 <em>Jenny</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">15</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">蘇聖甯 <em>Alice</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">16</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">劉怡平 <em>Pin</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">17</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張宇盛 <em>Yusheng</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">18</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">楊昀軒 <em>Barron</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">19</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">高浚修 <em>Diro</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">20</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">孫嘉鴻 <em>Yonce</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">21</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">蘇淑敏 <em>Yuki</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">22</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林晏妤 <em>Yenyu</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">23</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">董芃彣 <em>Paulina</em></p>
+                  </div>
                 </div>
               </div>
-              <div class="roster-member">
-                <span class="roster-member__num">02</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">李宛軒 <em>Grace</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">03</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳晴文 <em>Joey</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">04</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">黃任吟 <em>Irene</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">05</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張綠 <em>Lu</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">06</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">黃依婷 <em>Aya</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">07</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">李天一 <em>Timo</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">08</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">湯淳羽 <em>Birdy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">09</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">楊立琳 <em>Angel</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">10</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">游家祥 <em>Vincent</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">11</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張瑞賢 <em>Henry</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">12</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">藍文良 <em>Devin</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">13</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林筱真 <em>Jasmine</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">14</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">蔡亦晴 <em>Jenny</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">15</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">蘇聖甯 <em>Alice</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">16</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">劉怡平 <em>Pin</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">17</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張宇盛 <em>Yusheng</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">18</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">楊昀軒 <em>Barron</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">19</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">高浚修 <em>Diro</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">20</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">孫嘉鴻 <em>Yonce</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">21</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">蘇淑敏 <em>Yuki</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">22</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林晏妤 <em>Yenyu</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">23</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">胡洸瑞 <em>Rick</em></p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
         <div class="roster-item">
           <button class="roster-item__header" type="button" aria-expanded="false">
             <span class="roster-item__badge">04</span>
-            <span class="roster-item__name">第 4 組 <em>(23 人)</em></span>
+            <span class="roster-item__name">第 4 組 <em>(22 人)</em></span>
             <svg class="icon roster-item__chevron"><use href="#icon-chevron"/></svg>
           </button>
           <div class="roster-item__body">
             <div class="roster-item__body-inner">
               <div class="roster-member-grid">
-              <div class="roster-member">
-                <span class="roster-member__num">01</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">余念蘋 <em>Ariel</em></p>
+                <div class="roster-member">
+                  <span class="roster-member__num">01</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">余念蘋 <em>Ariel</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">02</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">顏翌如 <em>Yiru</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">03</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">許維芬 <em>Tara</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">04</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">胡啟心 <em>Brook</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">05</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">廖于瑩 <em>Liora</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">06</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳瑋瑄 <em>Allie</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">07</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">沈美君 <em>Cristina</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">08</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">王姵雲 <em>Peggy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">09</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">謝孟錡 <em>Brent</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">10</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">華希恕 <em>Trev</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">11</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">劉繼方 <em>Alan</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">12</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">詹玉如 <em>Fion</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">13</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳佩君 <em>Peggy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">14</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">黃巧玟 <em>Yoyo</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">15</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳宜婷 <em>Tino</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">16</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">賴佳君 <em>Gene</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">17</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">胡洸瑞 <em>Rick</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">18</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">羅瑩芳 <em>Minnie</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">19</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">郭葳 <em>Wei Wei</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">20</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">楊秉樺 <em>Benny</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">21</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">唐珮琳 <em>Doreen</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">22</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">周祐瑄 <em>Anita</em></p>
+                  </div>
                 </div>
               </div>
-              <div class="roster-member">
-                <span class="roster-member__num">02</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">顏翌如 <em>Yiru</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">03</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">許維芬 <em>Tara</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">04</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">胡啟心 <em>Brook</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">05</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">廖于瑩 <em>Liora</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">06</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳瑋瑄 <em>Allie</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">07</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">沈美君 <em>Cristina</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">08</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">王姵雲 <em>Peggy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">09</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">謝孟錡 <em>Brent</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">10</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">華希恕 <em>Trev</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">11</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">劉繼方 <em>Alan</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">12</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">詹玉如 <em>Fion</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">13</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳佩君 <em>Peggy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">14</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">黃巧玟 <em>Yoyo</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">15</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳宜婷 <em>Tino</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">16</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">賴佳君 <em>Gene</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">17</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">董芃彣 <em>Paulina</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">18</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">羅瑩芳 <em>Minnie</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">19</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">郭葳 <em>Wei Wei</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">20</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">楊秉樺 <em>Benny</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">21</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳乙瑄 <em>Erica</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">22</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">唐珮琳 <em>Doreen</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">23</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">周祐瑄 <em>Anita</em></p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
@@ -1132,139 +1145,139 @@
           <div class="roster-item__body">
             <div class="roster-item__body-inner">
               <div class="roster-member-grid">
-              <div class="roster-member">
-                <span class="roster-member__num">01</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">孫意盈 <em>Poppy</em></p>
+                <div class="roster-member">
+                  <span class="roster-member__num">01</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">孫意盈 <em>Poppy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">02</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳志權 <em>Morris</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">03</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林秀珊 <em>Sandy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">04</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林詩涵 <em>Sandy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">05</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳妍希 <em>Jewel</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">06</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">夏憲凱 <em>Jerry</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">07</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">朱奕嘉 <em>Eliot</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">08</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">曾于哲 <em>Benson</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">09</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">何玟萱 <em>Hedy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">10</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">商瑄芙 <em>Daphne</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">11</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳琦琦 <em>Kiki</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">12</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">江祖榮 <em>Ray</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">13</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">廖宸萱 <em>Hannah</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">14</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">蔡育馨 <em>Leona</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">15</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">蔡佳蓉 <em>Rong</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">16</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">黃柏叡 <em>Gary</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">17</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">許燕俊 <em>Yan</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">18</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">喬俊婷 <em>Tiffany</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">19</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張馨云 <em>Hsinyun</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">20</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">廖咨宥 <em>Jesse</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">21</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">樂宛柔 <em>Zoe</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">22</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳怡菁 <em>Murphy</em></p>
+                  </div>
                 </div>
               </div>
-              <div class="roster-member">
-                <span class="roster-member__num">02</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳志權 <em>Morris</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">03</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林秀珊 <em>Sandy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">04</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林詩涵 <em>Sandy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">05</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳妍希 <em>Jewel</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">06</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">夏憲凱 <em>Jerry</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">07</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">朱奕嘉 <em>Eliot</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">08</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">曾于哲 <em>Benson</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">09</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">何玟萱 <em>Hedy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">10</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">商瑄芙 <em>Daphne</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">11</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳琦琦 <em>Kiki</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">12</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">江祖榮 <em>Ray</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">13</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">廖宸萱 <em>Hannah</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">14</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">蔡育馨 <em>Leona</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">15</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">蔡佳蓉 <em>Rong</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">16</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">黃柏叡 <em>Gary</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">17</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">許燕俊 <em>Yan</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">18</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">喬俊婷 <em>Tiffany</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">19</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張馨云 <em>Hsinyun</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">20</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">廖咨宥 <em>Jesse</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">21</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">樂宛柔 <em>Zoe</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">22</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳怡菁 <em>Murphy</em></p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
@@ -1277,139 +1290,139 @@
           <div class="roster-item__body">
             <div class="roster-item__body-inner">
               <div class="roster-member-grid">
-              <div class="roster-member">
-                <span class="roster-member__num">01</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">郭雅文 <em>Mai</em></p>
+                <div class="roster-member">
+                  <span class="roster-member__num">01</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">郭雅文 <em>Mai</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">02</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">許嫚詠 <em>Iris</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">03</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">宋泳東 <em>Stan</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">04</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林貝恩 <em>Bella</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">05</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">盧智惠 <em>Jeehae</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">06</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳羿安 <em>Ian</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">07</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">王韻婷 <em>Iris</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">08</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張詠晴 <em>Tina</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">09</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">王羿人 <em>Ian</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">10</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">吳沛宸 <em>Jamie</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">11</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">簡以淳 <em>Jane</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">12</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳柏元 <em>Remy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">13</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">顧嘉琳 <em>Prudence</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">14</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">賴怡玟 <em>Dabo</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">15</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">張榕云 <em>Ivy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">16</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林家名 <em>Amber</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">17</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳建宇 <em>Kevin Chen</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">18</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">劉宣辰 <em>Tracy</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">19</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">陳雅萍 <em>Celia</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">20</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">高妤萱 <em>Abby</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">21</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">林彥呈 <em>Matt</em></p>
+                  </div>
+                </div>
+                <div class="roster-member">
+                  <span class="roster-member__num">22</span>
+                  <div class="roster-member__info">
+                    <p class="roster-member__name">呂觀賢 <em>Watoto</em></p>
+                  </div>
                 </div>
               </div>
-              <div class="roster-member">
-                <span class="roster-member__num">02</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">許嫚詠 <em>Iris</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">03</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">宋泳東 <em>Stan</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">04</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林貝恩 <em>Bella</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">05</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">盧智惠 <em>Jeehae</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">06</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳羿安 <em>Ian</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">07</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">王韻婷 <em>Iris</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">08</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張詠晴 <em>Tina</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">09</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">王羿人 <em>Ian</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">10</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">吳沛宸 <em>Jamie</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">11</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">簡以淳 <em>Jane</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">12</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳柏元 <em>Remy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">13</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">顧嘉琳 <em>Prudence</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">14</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">賴怡玟 <em>Dabo</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">15</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">張榕云 <em>Ivy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">16</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林家名 <em>Amber</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">17</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳建宇 <em>Kevin Chen</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">18</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">劉宣辰 <em>Tracy</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">19</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">陳雅萍 <em>Celia</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">20</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">高妤萱 <em>Abby</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">21</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">林彥呈 <em>Matt</em></p>
-                </div>
-              </div>
-              <div class="roster-member">
-                <span class="roster-member__num">22</span>
-                <div class="roster-member__info">
-                  <p class="roster-member__name">呂觀賢 <em>Watoto</em></p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>

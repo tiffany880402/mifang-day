@@ -1,6 +1,29 @@
 // 米蘭米主黨 M.D.P — Campaign Site Interactions
 
 document.addEventListener('DOMContentLoaded', () => {
+  // ---- Hero video sound toggle ----
+  // 瀏覽器基本上都會擋掉「有聲音自動播放」,所以影片預設仍是 autoplay + muted。
+  // 這顆按鈕讓使用者可以「一鍵」開聲音(順便在 autoplay 被擋掉時重新觸發播放)。
+  const heroVideo = document.getElementById('heroVideo');
+  const soundToggle = document.getElementById('heroSoundToggle');
+  if (heroVideo && soundToggle) {
+    const soundLabel = soundToggle.querySelector('.hero__sound-label');
+    const syncButton = () => {
+      const unmuted = !heroVideo.muted;
+      soundToggle.classList.toggle('is-unmuted', unmuted);
+      soundToggle.setAttribute('aria-pressed', String(unmuted));
+      soundToggle.setAttribute('aria-label', unmuted ? '關閉影片聲音' : '開啟影片聲音');
+      if (soundLabel) soundLabel.textContent = unmuted ? '靜音' : '開啟聲音';
+    };
+    soundToggle.addEventListener('click', () => {
+      heroVideo.muted = !heroVideo.muted;
+      // 如果先前 autoplay 被瀏覽器擋掉,這裡的 play() 是使用者手勢觸發,一定會成功
+      heroVideo.play().catch(() => {});
+      syncButton();
+    });
+    syncButton();
+  }
+
   // ---- Marquee: duplicate items within the same track so translateX(-50%)
   // lands exactly on a repeat boundary (seamless infinite scroll) ----
   document.querySelectorAll('[data-marquee]').forEach((track) => {

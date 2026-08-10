@@ -241,8 +241,38 @@ svg:has(use[href="#icon-star"]) { fill: currentColor; }
   background: var(--bg-hero);
   overflow: hidden;
 }
-.hero__full { width: 100%; line-height: 0; }
+.hero__full { width: 100%; line-height: 0; position: relative; }
 .hero__full-img { display: block; width: 100%; height: auto; object-fit: cover; }
+.hero__sound-toggle {
+  position: absolute;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 32px);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(195, 224, 2, 0.5);
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(6px);
+  color: var(--lime);
+  font-weight: 800;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.hero__sound-toggle:hover { background: rgba(10, 10, 10, 0.78); transform: translateY(-2px); }
+.hero__sound-toggle .icon { width: 20px; height: 20px; flex-shrink: 0; }
+.hero__sound-icon--on { display: none; }
+.hero__sound-toggle.is-unmuted { color: var(--white); border-color: var(--border); }
+.hero__sound-toggle.is-unmuted .hero__sound-icon--off { display: none; }
+.hero__sound-toggle.is-unmuted .hero__sound-icon--on { display: block; }
+@media (max-width: 640px) {
+  .hero__sound-toggle { padding: 10px; }
+  .hero__sound-label { display: none; }
+}
 
 /* ---- (以下為文字重建版 hero 的備用樣式,目前未使用) ---- */
 .hero__grid {
